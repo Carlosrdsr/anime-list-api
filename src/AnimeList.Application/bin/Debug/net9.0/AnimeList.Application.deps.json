@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AnimeList.Application/1.0.0": {
+        "dependencies": {
+          "AnimeList.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AnimeList.Application.dll": {}
+        }
+      },
+      "AnimeList.Domain/1.0.0": {
+        "runtime": {
+          "AnimeList.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AnimeList.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AnimeList.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "F7jrTkJYm7xn8J0nnDM0PY/atrXajOokKfTN84z0WTE=",
+  "Source": "AnimeList.API",
+  "BasePath": "_content/AnimeList.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

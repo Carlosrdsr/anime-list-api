@@ -10,4 +10,11 @@
     <ProjectReference Include="..\AnimeList.Domain\AnimeList.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\AnimesList\CreateList\" />
+    <Folder Include="Features\AnimesList\DeleteList\" />
+    <Folder Include="Features\AnimesList\SearchList\" />
+    <Folder Include="Features\AnimesList\UpdateList\" />
+  </ItemGroup>
+
 </Project>
