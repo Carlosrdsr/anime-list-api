@@ -13,8 +13,8 @@ public class AnimeEntityConfiguration : IEntityTypeConfiguration<AnimeModel>
         builder.HasKey(s => s.Id);
 
         builder.Property(s => s.Id).ValueGeneratedOnAdd();
-        builder.Property(s => s.Nome).IsRequired().HasMaxLength(100); 
-        builder.Property(s => s.Diretor).IsRequired().HasMaxLength(50); 
-        builder.Property(s => s.Resumo).IsRequired().HasMaxLength(500); 
+        builder.Property(s => s.Nome).IsRequired().HasMaxLength(100);
+        builder.Property(s => s.Diretor).IsRequired().HasMaxLength(50);
+        builder.Property(s => s.Resumo).IsRequired().HasMaxLength(500);
     }
 }

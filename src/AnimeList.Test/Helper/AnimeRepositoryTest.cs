@@ -18,7 +18,7 @@ namespace AnimeList.Test.Helper
 
         public AnimeModel GetAnimeById(long id)
         {
-            return new AnimeModel(null,null, null);
+            return new AnimeModel(null, null, null);
         }
 
         public void InsertAnime(AnimeModel model)

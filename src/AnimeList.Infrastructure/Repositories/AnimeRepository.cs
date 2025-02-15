@@ -54,7 +54,7 @@ namespace AnimeList.Infrastructure.Repositories
         public void DeleteAnime(AnimeModel model)
         {
             _animeDbContext.Animes.Remove(model);
-        }        
+        }
 
         public bool ExistsAnimeByNome(string nome)
         {

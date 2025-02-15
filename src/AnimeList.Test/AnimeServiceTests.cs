@@ -4,7 +4,7 @@ using IdentityModel.OidcClient;
 namespace AnimeList.Test.Tests
 {
     public class AnimeServiceTests
-    {       
+    {
 
         [Fact]
         public async Task InserirAnimeComSucesso()
@@ -51,7 +51,7 @@ namespace AnimeList.Test.Tests
             var tarefa = repository.SearchAnime(id, null, null, 1, 10);
 
             //Assert
-            Assert.Null(tarefa) ;
+            Assert.Null(tarefa);
         }
 
         [Fact]
