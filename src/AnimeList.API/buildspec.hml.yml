@@ -1,0 +1,27 @@
+version: 0.2
+
+env:
+  variables:
+    DOCKERFILE: "src/AnimeList.Api/Dockerfile"
+    REPOSITORY: "XXXXXXXXXXXX.dkr.ecr.us-east-1.amazonaws.com/anime-list-api:staging"    
+
+phases:
+  pre_build:
+    commands:
+      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+  build:
+    commands:
+      - docker build -t $REPOSITORY -f $DOCKERFILE .
+    finally:
+      - docker push $REPOSITORY
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Post_build started on `date`
+      - echo $ docker push $REPO_URI:$IMAGE_TAG
+      - docker push $REPO_URI:$IMAGE_TAG
+      - printf '[{"name":"anime-list-api","imageUri":"%s"}]' $REPOSITORY > imagedefinitions.json
+    finally:
+      - echo build completed on `date`
+artifacts:
+    files: imagedefinitions.json
