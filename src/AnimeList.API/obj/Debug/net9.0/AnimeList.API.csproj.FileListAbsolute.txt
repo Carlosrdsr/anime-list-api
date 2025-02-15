@@ -190,3 +190,5 @@ D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\NJsonSchema.dl
 D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\NJsonSchema.Annotations.dll
 D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\ZymLabs.NSwag.FluentValidation.dll
 D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\ZymLabs.NSwag.FluentValidation.AspNetCore.dll
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\buildspec.hml.yml
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\buildspec.prd.yml
