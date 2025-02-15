@@ -182,3 +182,11 @@ D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\AnimeList.Infr
 D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\AnimeList.Infrastructure.pdb
 D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\FluentValidation.dll
 D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\Namotion.Reflection.dll
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\NJsonSchema.dll
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\NJsonSchema.Annotations.dll
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\ZymLabs.NSwag.FluentValidation.dll
+D:\Cursos\CSharp\AnimeList.API\src\AnimeList.API\bin\Debug\net9.0\ZymLabs.NSwag.FluentValidation.AspNetCore.dll

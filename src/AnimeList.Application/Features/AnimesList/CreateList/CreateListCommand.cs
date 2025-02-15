@@ -3,7 +3,7 @@ using MediatR;
 
 namespace AnimeList.Application.Features.AnimesList.CreateList;
 
-public class CreateListCommand : IRequest<Unit>
+public class CreateListCommand : IRequest<AnimeDto>
 {
     public string Nome { get; private set; }
     public string Diretor { get; private set; }

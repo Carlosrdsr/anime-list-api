@@ -1,5 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Net;
+﻿using System.Net;
 
 namespace AnimeList.Domain.Exceptions;
 

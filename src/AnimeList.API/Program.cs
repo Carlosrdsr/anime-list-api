@@ -2,7 +2,6 @@ using AnimeList.Application.Features.AnimesList.CreateList;
 using AnimeList.Domain.Interface;
 using AnimeList.Infrastructure.Data;
 using AnimeList.Infrastructure.Repositories;
-using Microsoft.AspNetCore.Hosting;
 using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Json;
@@ -59,6 +58,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(options =>
             options.SwaggerEndpoint("/openapi/v1.json", "animes api"));
 }
+
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .WithExposedHeaders("Pagination", "Content-Disposition"));
 
 app.UseHttpsRedirection();
 

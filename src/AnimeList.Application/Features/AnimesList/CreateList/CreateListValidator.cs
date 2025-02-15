@@ -8,14 +8,14 @@ public class CreateListValidator : AbstractValidator<CreateListCommand>
     {
         RuleFor(x => x.Nome)
             .NotEmpty()
-            .MinimumLength(100);
+            .MaximumLength(100);
 
         RuleFor(x => x.Diretor)
             .NotEmpty()
-            .MinimumLength(50);
+            .MaximumLength(50);
 
         RuleFor(x => x.Resumo)
             .NotEmpty()
-            .MinimumLength(500);
+            .MaximumLength(500);
     }
 }
