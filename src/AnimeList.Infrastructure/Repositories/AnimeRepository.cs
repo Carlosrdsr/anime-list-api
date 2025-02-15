@@ -27,10 +27,10 @@ namespace AnimeList.Infrastructure.Repositories
                 query = query.Where(s => s.Id == id);
 
             if (!string.IsNullOrEmpty(nome))
-                query = query.Where(s => s.Nome == nome);
+                query = query.Where(s => s.Nome.Contains(nome));
 
             if (!string.IsNullOrEmpty(diretor))
-                query = query.Where(s => s.Diretor == diretor);
+                query = query.Where(s => s.Diretor.Contains(diretor));
 
             if (page.HasValue && limit.HasValue)
             {
@@ -54,19 +54,7 @@ namespace AnimeList.Infrastructure.Repositories
         public void DeleteAnime(AnimeModel model)
         {
             _animeDbContext.Animes.Remove(model);
-        }
-
-        public bool ExistsAnimeById(long id)
-        {
-            var query = _animeDbContext.Animes
-                        .AsNoTracking()
-                        .Where(s => s.Id == id);
-
-            if (query.Count() > 0)
-                return true;
-
-            return false;
-        }
+        }        
 
         public bool ExistsAnimeByNome(string nome)
         {
@@ -83,6 +71,15 @@ namespace AnimeList.Infrastructure.Repositories
         public void SaveChanges()
         {
             _animeDbContext.SaveChanges();
+        }
+
+        public AnimeModel GetAnimeById(long id)
+        {
+            var query = _animeDbContext.Animes
+                        .Where(s => s.Id == id)
+                        .FirstOrDefault();
+
+            return query;
         }
     }
 }

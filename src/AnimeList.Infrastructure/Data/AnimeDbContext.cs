@@ -18,13 +18,13 @@ namespace AnimeList.Infrastructure.Data
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer("Server=DESKTOP-IL6MI7E;Database=desafiodb;Integrated Security=True;");
+        => options.UseSqlServer("Server=DESKTOP-IL6MI7E;Database=desafiodb;Integrated Security=SSPI;TrustServerCertificate=True");
 
         private readonly string? _connectionString;
 
         public AnimeDbContext(DbContextOptions<AnimeDbContext> options) : base(options)
         {
-            _connectionString = "Server=DESKTOP-IL6MI7E;Database=desafiodb;Integrated Security=True;";
+            _connectionString = "Server=DESKTOP-IL6MI7E;Database=desafiodb;Integrated Security=SSPI;TrustServerCertificate=True";
         }
 
         public IDbConnection CreateDbConnection()

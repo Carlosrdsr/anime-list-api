@@ -1,6 +1,8 @@
 ﻿using AnimeList.Application.Dto;
 using AnimeList.Application.Features.AnimesList.CreateList;
+using AnimeList.Application.Features.AnimesList.DeleteList;
 using AnimeList.Application.Features.AnimesList.SearchList;
+using AnimeList.Application.Features.AnimesList.UpdateList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
@@ -40,11 +42,11 @@ public class AnimeController : ControllerBase
     /// <summary>
     /// Pesquisa paginada por Id, Nome ou Diretor
     /// </summary>
-    /// <param name="id"></param>
-    /// <param name="nome"></param>
-    /// <param name="diretor"></param>
-    /// <param name="page"></param>
-    /// <param name="limit"></param>
+    /// <param name="id">Código de identificação</param>
+    /// <param name="nome">Nome do anime</param>
+    /// <param name="diretor">Diretor responsável</param>
+    /// <param name="page">Numero da página</param>
+    /// <param name="limit">Quantidade de anime por página</param>
     /// <returns></returns>
     [HttpGet]
     public async Task<ActionResult> Get(long? id, string? nome, string? diretor, int? page, int? limit)
@@ -54,5 +56,43 @@ public class AnimeController : ControllerBase
         var result = await _mediator.Send(query);
 
         return Ok(result);
+    }
+
+    /// <summary>
+    /// Altera informações do Anime
+    /// </summary>
+    /// <param name="model"></param>
+    /// <returns></returns>
+    [HttpPut]
+    public async Task<ActionResult> Put([FromBody] AnimeDto model)
+    {
+        var anime = new UpdateListCommand()
+        {
+            Id = model.Id,
+            Nome = model.Nome,
+            Diretor = model.Diretor,
+            Resumo = model.Resumo
+        };
+
+        var result = await _mediator.Send(anime);
+
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Excluir um determinado anime por Id
+    /// </summary>
+    /// <param name="id">Código de identificação</param>
+    /// <returns></returns>
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> Delete(int id)
+    {
+        var query = new DeleteListCommand() { Id = id };
+
+        await _mediator.Send(query);
+
+        Log.Information("Agência " + id.ToString() + " deletada.");
+
+        return NoContent();
     }
 }

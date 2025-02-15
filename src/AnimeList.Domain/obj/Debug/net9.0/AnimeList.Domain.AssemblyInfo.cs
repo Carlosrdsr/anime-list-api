@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnimeList.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bcdb622b020b206c1c739c348f05228cfb999f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c2510f868c916ac4880cd7a663d00c59fcdc55a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnimeList.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnimeList.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

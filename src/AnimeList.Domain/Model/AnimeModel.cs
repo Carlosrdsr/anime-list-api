@@ -23,4 +23,11 @@ public class AnimeModel
         Diretor = diretor;
         Resumo = resumo;
     }
+
+    public void Update(string nome, string diretor, string resumo)
+    {
+        Nome = nome ?? Nome;
+        Diretor = diretor ?? Diretor;
+        Resumo = resumo ?? Resumo;
+    }
 }

@@ -9,18 +9,18 @@ namespace AnimeList.Application.Features.AnimesList.CreateList
     public class CreateListCommandHandler : IRequestHandler<CreateListCommand, Unit>
     {
 
-        private readonly IAnimeRepository _repository;
+        private readonly IAnimeRepository _animeRepository;
         private readonly ILogger _logger;
 
         public CreateListCommandHandler(IAnimeRepository repository, ILogger logger)
         {
-            _repository = repository;
+            _animeRepository = repository;
             _logger = logger;
         }
 
         public async Task<Unit> Handle(CreateListCommand request, CancellationToken cancellationToken)
         {
-            if (_repository.ExistsAnimeByNome(request.Nome))
+            if (_animeRepository.ExistsAnimeByNome(request.Nome))
             {
                 _logger.Error("Anime já cadastrado.");
                 throw new AnimeListDomainException("Anime já cadastrado!");
@@ -28,9 +28,9 @@ namespace AnimeList.Application.Features.AnimesList.CreateList
 
             var model = new AnimeModel(request.Nome, request.Diretor, request.Resumo);
 
-            _repository.InsertAnime(model);
+            _animeRepository.InsertAnime(model);
 
-            _repository.SaveChanges();
+            _animeRepository.SaveChanges();
 
             _logger.Information("Anime cadastrado.");
 
