@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AnimeList.Application\AnimeList.Application.csproj" />
+    <ProjectReference Include="..\AnimeList.Domain\AnimeList.Domain.csproj" />
   </ItemGroup>
 
 </Project>
