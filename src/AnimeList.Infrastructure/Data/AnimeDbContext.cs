@@ -17,8 +17,8 @@ namespace AnimeList.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new AnimeEntityConfiguration());
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer("Server=DESKTOP-IL6MI7E;Database=desafiodb;Integrated Security=SSPI;TrustServerCertificate=True");
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //=> options.UseSqlServer("Server=DESKTOP-IL6MI7E;Database=desafiodb;Integrated Security=SSPI;TrustServerCertificate=True");
 
         private readonly string? _connectionString;
 

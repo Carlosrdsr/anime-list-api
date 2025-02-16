@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AnimeList.Domain\AnimeList.Domain.csproj" />
+    <ProjectReference Include="..\AnimeList.Infrastructure\AnimeList.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
